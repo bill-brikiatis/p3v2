@@ -69,6 +69,8 @@
 
 		?>
 	</div>
+	
+	<a href="/">Back to Home</a>
 </body>
 </html>
 
