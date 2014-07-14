@@ -13,7 +13,7 @@
 				echo implode('<p>', $paragraphs);
 			}
 			else {
-				echo "Something's wrong. There are no paragraphs indicated.";
+				echo "Something is wrong. The system doesn't know the number of paragraphs.";
 			}
 			
 		}
@@ -55,9 +55,19 @@
 	{{ Form::close() }}
 
 	<div class="gen">
-		<?php $graphs = $_GET['graphs']; ?>
-		<?php $obj1 = new Gen($graphs); ?>
-		{{ $obj1->genText() }}
+		
+		<?php 
+		if(!($_GET)){
+			echo "Please enter the number of paragraphs.";
+		}
+		else {
+		$graphs = $_GET['graphs'];
+		$obj1 = new Gen($graphs);
+		echo $obj1->genText();
+		}
+		
+
+		?>
 	</div>
 </body>
 </html>

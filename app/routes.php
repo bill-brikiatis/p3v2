@@ -21,3 +21,7 @@ Route::get('/gentext', function()
 	return View::make('gentext');
 });
 
+Route::get('/user-data', function()
+{
+	return View::make('user-data');
+});
