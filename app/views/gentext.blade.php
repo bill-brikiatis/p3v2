@@ -26,6 +26,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Lorem Ipsum Text Generator</title>
+	<link type="text/css" rel="stylesheet"	href="style.css">
 </head>
 <body>
 	<h1>Lorem Ipsum Text Generator</h1>

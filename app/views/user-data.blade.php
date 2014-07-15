@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Generate User Data</title>
+	<link type="text/css" rel="stylesheet"	href="style.css">
 </head>
 <body>
 	<h1>Generate User Data</h1>
