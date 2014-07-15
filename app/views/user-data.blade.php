@@ -14,7 +14,7 @@
 		'method' => 'GET'
 		)) }}
 		
-		{{ Form::label('users', '# of Users') }}
+		{{ Form::label('users', 'Number of Users') }}
 		{{ Form::select('users', array(
 			1 => 1,
 			2 => 2,
@@ -29,20 +29,20 @@
 		
 		), 1) }}
 		
-	{{ Form::submit('Submit') }}
+	{{ Form::submit('Generate!') }}
 		
 	{{ Form::close() }}
-	
+	<br>
 	
 	<?php
 	if(!($_GET)){
-			echo "Please enter the number of users.";
+			echo "Please enter the number of users.<br><br>";
 		}
 		else {
 			$faker = Faker\Factory::create();
 			$users = $_GET['users'];
 			for ($i=0; $i < $users; $i++) { 
-				echo "$faker->name <br>";
+				echo "<strong>$faker->name</strong><br>";
 				echo "$faker->address <br>";
 				echo "$faker->text <br><br>";
 			}}

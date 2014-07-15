@@ -30,13 +30,14 @@
 </head>
 <body>
 	<h1>Lorem Ipsum Text Generator</h1>
+	<p>How many paragraphs do you want?</p>
 	
 	{{ Form::open(array( 
 		'url' => 'gentext', 
 		'method' => 'GET'
 		)) }}
 		
-		{{ Form::label('graphs', '# of Paragraphs') }}
+		{{ Form::label('graphs', 'Number of Paragraphs') }}
 		{{ Form::select('graphs', array(
 			1 => 1,
 			2 => 2,
@@ -51,7 +52,7 @@
 		
 		), 1) }}
 		
-	{{ Form::submit('Submit') }}
+	{{ Form::submit('Generate!') }}
 		
 	{{ Form::close() }}
 
@@ -59,7 +60,7 @@
 		
 		<?php 
 		if(!($_GET)){
-			echo "Please enter the number of paragraphs.";
+			// Do nothing
 		}
 		else {
 		$graphs = $_GET['graphs'];
@@ -71,7 +72,7 @@
 		?>
 	</div>
 	
-	<a href="/">Back to Home</a>
+	<br><a href="/">Back to Home</a>
 </body>
 </html>
 
